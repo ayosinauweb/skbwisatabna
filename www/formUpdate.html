@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    
+	<meta http-equiv="Content-Security-Policy"
+          content="default-src *;
+               script-src 'self' 'unsafe-inline' 'unsafe-eval'
+                           127.0.0.1:*
+                           http://*.google.com
+                           http://*.gstatic.com
+                           http://*.googleapis.com
+                           http://*.firebaseio.com
+                           https://*.google.com
+                           https://*.gstatic.com
+                           https://*.googleapis.com
+                           https://*.firebaseio.com
+						   https://*.bootstrapcdn.com
+                           ;
+               style-src  'self' 'unsafe-inline'
+                          127.0.0.1
+                           http://*.google.com
+                           http://*.gstatic.com
+                           http://*.googleapis.com
+                           http://*.firebaseio.com
+                           https://*.google.com
+                           https://*.gstatic.com
+                           https://*.googleapis.com
+                           https://*.firebaseio.com
+						   https://*.bootstrapcdn.com" />
+    <link rel="stylesheet" type="text/css" href="css/wisata.css" />
+    
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script src="js/formUpdate.js"></script>
+	
+    <title>Wisata Banjarnegaraku</title>
+
+</head>
+<body>
+  <div class="container-fluid">
+	  <div class="row">
+	    <div class="col-sm-12">
+        <div>
+          <div class="form-group">
+            <label>ID Event</label>
+            <input class="form-control" id="e_id" placeholder="Masukkan ID Event" />
+          </div>
+
+          <div class="form-group">
+            <label>Nama Event</label>
+            <input class="form-control" id="e_nama" onkeypress=pindahke(this.id,event,'e_tgl')
+            required />
+          </div>
+
+          <div class="form-group">
+            <label>Tanggal Pelaksanaan</label>
+            <input class="form-control" id="e_tgl" type="date" onkeypress=pindahke(this.id,event,'e_lks') required />
+          </div>
+
+          <div class="form-group">
+            <label>Lokasi Penyelenggaraan</label>
+            <input class="form-control" id="e_lks" onkeypress=pindahke(this.id,event,'e_desk') />
+          </div>
+
+          <div class="form-group">
+            <label>Deskripsi Acara</label>
+            <input class="form-control" id="e_desk" onkeypress=pindahke(this.id,event,'e_htm')  />
+          </div>
+
+          <div class="form-group">
+            <label>Harga Tiket</label>
+            <input class="form-control" id="e_htm" onkeypress=pindahke(this.id,event,'simpanEvent')  />
+          </div>
+
+          <div class="form-group">
+            <a class="btn btn-primary" id="updateEvent">Simpan</a>
+          </div>
+
+        </div>
+	    </div>
+	  </div>
+  </div>
+  <div class="row">
+	<div class="col-sm-12">
+		<div id="listEvent"></div>
+		<div>
+			<a class='btn btn-success' href="index.html"> Beranda</a>
+		</div>
+	</div>
+  </div>
+</body>
+</html>

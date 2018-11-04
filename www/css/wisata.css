@@ -1,0 +1,25 @@
+#dftEvent{
+		width: 80%; margin: auto;
+	}
+	#dftEvent > table.tblEvent {
+		width: 100%;
+		text-align: center;
+		margin: 20px 0;  
+	}
+  
+	.nmEvent{ font-size: 16px; font-weight: bold; }
+	.dsEvent{ font-size: 12px; font-style: italic;}
+	.tgEvent{ 
+		text-align: right; 
+		padding-right: 20px; 
+		width: 50%;
+		font-family: monospace;
+	}
+	.tkEvent{ 
+		text-align: left; 
+		padding-left: 20px;
+		width: 50%;
+		font-family: monospace;
+	}
+	
+	.lkEvent{ font-family: serif; }
